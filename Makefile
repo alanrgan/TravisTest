@@ -2,7 +2,7 @@ OBJS_DIR = .objs
 
 CC = gcc
 WARNINGS = -Wall -Wextra -Werror -Wno-error=unused-parameter
-CFLAGS_RELEASE = -O2 $(WARNINGS) -g -std=c99 -c -MMD -MP -D_GNU_SOURCE
+CFLAGS_RELEASE = -O2 $(WARNINGS) -g -std=c99 -c -MMD -MP -D_GNU_SOURCE -I.
 
 LD = gcc
 
