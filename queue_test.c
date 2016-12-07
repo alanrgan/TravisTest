@@ -20,7 +20,9 @@ int main() {
 			printf("pull result is NULL\n");
 			exit(1);
 		}
-		if((i == 26 && c != NULL) || *c != (97+i)) {
+		if(i == 26 && c != NULL) {
+			exit(1);
+		} else if(*c != (97+i)) {
 			exit(1);
 		}
 	}
