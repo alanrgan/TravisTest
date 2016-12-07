@@ -13,6 +13,7 @@ all: release
 
 .PHONY: release
 release: test
+	./queue_test
 
 -include $(OBJS_DIR)/*.d
 
