@@ -19,7 +19,7 @@ int main() {
 		if(i == 26 && c != NULL) {
 			exit(1);
 		} else if(!c) {
-			printf("pull result is NULL\n");
+			printf("pull result is NULL at iteration %d\n", i);
 			exit(1);
 		}
 
