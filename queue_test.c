@@ -7,7 +7,7 @@ void *char_copy_constructor(void *c) { return c; }
 void char_destructor(void *c) { free(c); }
 
 int main() {
-	queue_t *charq = queue_create(10);
+	queue_t *charq = queue_create(char_copy_constructor, char_destructor);
 	for(int i = 0; i < 26; i++) {
 		char *c = malloc(sizeof(char));
 		*c = (char)(97+i);
