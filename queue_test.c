@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "queue.h"
 
@@ -11,7 +12,12 @@ int main() {
 	}
 
 	for(int i = 0; i < 26; i++) {
-		if(*(char *)queue_pull(charq) != (97+i)) {
+		char *c = (char *)queue_pull(charq);
+		if(!c) {
+			printf("pull result is NULL\n");
+			exit(1);
+		}
+		if(*c != (97+i)) {
 			exit(1);
 		}
 	}
