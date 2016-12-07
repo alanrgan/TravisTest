@@ -29,6 +29,6 @@ void *queue_pull(queue_t *queue) {
 	if(queue->size == 0) return NULL;
 	queue_elem_t *temp = queue->head;
 	queue->head = queue->head->next;
-	queue->size++;
+	queue->size--;
 	return temp->data;
 }
