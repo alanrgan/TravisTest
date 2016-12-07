@@ -3,6 +3,9 @@
 
 #include "queue.h"
 
+void *char_copy_constructor(void *c) { return c; }
+void char_destructor(void *c) { free(c); }
+
 int main() {
 	queue_t *charq = queue_create(10);
 	for(int i = 0; i < 26; i++) {
