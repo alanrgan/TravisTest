@@ -22,6 +22,7 @@ int main() {
 			printf("pull result is NULL at iteration %d\n", i);
 			exit(1);
 		}
+		printf("%s\n", c);
 
 		if(*c != (97+i)) {
 			exit(1);

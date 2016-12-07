@@ -21,12 +21,12 @@ void queue_push(queue_t *queue, void *data) {
 	} else {
 		queue->tail->next = next_elem;
 		queue->tail = queue->tail->next;
-		queue->size++;
 	}
+	queue->size++;
 }
 
 void *queue_pull(queue_t *queue) {
-	if(queue->size == 0) return NULL;
+	if(!queue->head) return NULL;
 	queue_elem_t *temp = queue->head;
 	queue->head = queue->head->next;
 	queue->size--;
