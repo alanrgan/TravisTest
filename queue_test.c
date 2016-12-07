@@ -14,13 +14,13 @@ int main() {
 		queue_push(charq, c);
 	}
 
-	for(int i = 0; i < 26; i++) {
+	for(int i = 0; i < 27; i++) {
 		char *c = (char *)queue_pull(charq);
 		if(!c) {
 			printf("pull result is NULL\n");
 			exit(1);
 		}
-		if(*c != (97+i)) {
+		if((i == 27 && c != NULL) || *c != (97+i)) {
 			exit(1);
 		}
 	}
